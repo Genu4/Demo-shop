@@ -1,0 +1,594 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto", "sans-serif";
+    background-image: url("images/patt.png");
+  }
+  
+  .container {
+    padding: 0 15px;
+    width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+  }
+  
+  [class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  
+  .col-4 {
+    flex: 0 0 33.3%;
+    max-width: 33.3%;
+  }
+  
+  .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .logo {
+    margin-top: 7px;
+  }
+  
+  .menu {
+    display: flex;
+    position: relative;
+  }
+  
+  .menu > li {
+    width: 25%;
+    border-left: 1px solid #2c71b8;
+  }
+  
+  .menu > li:last-child {
+    border-right: 1px solid #2c71b8;
+  }
+  
+  .menu > li > a {
+    display: block;
+    height: 50px;
+    text-decoration: none;
+    font-size: 21px;
+    color: #2c71b8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu > li:hover a {
+    background-color: #2c71b8;
+    color: white;
+  }
+  
+  .sub_menu {
+    display: none;
+    position: absolute;
+    width: 285px;
+    height: fit-content;
+    background-color: #2c71b8;
+    color: white;
+  }
+  
+  .sub_menu > li {
+    width: 100%;
+    height: 40px;
+  }
+  
+  .sub_menu > li > a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-left: 30px;
+    text-decoration: none;
+    font-size: 21px;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sub_menu > li:hover a {
+    color: #2c71b8;
+    background-color: white;
+  }
+  
+  .menu > li:hover .sub_menu {
+    display: block;
+    margin-left: -1px;
+  }
+  
+  .search_cart {
+    width: 100%;
+    height: 100%;
+    margin-left: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .search {
+    width: 200px;
+    height: 40px;
+    margin-right: 15px;
+    margin-left: 15px;
+    display: flex;
+    border: 1px solid #2c71b8;
+    background: transparent;
+  }
+  
+  .search_input {
+    width: 160px;
+    padding-left: 15px;
+    font-size: 21px;
+    color: #2c71b8;
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+  
+  .search_btn {
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c71b8;
+    background-image: url("images/search.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+  
+  ::placeholder {
+    font-size: 21px;
+    color: #2c71b8;
+  }
+  
+  .cart {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .cart_btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    background-image: url("images/cart.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .items_number {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2c71b8;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .items_n {
+    font-size: 12px;
+    font-weight: 500px;
+    color: white;
+  }
+  
+  .product_content {
+    display: flex;
+  }
+  
+  /* Галерея */
+  
+  .gallery {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: white;
+    border-bottom: 1px solid white;
+  }
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+  }
+  
+  /* бокова панель */
+  
+  .side_bar {
+    width: 270px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgba(255, 255, 255, 0.25);
+    height: fit-content;
+    color: white;
+    font-size: 21px;
+    border-right: 1px solid white;
+  }
+
+  .side_bar li {
+    margin-bottom: 25px;
+    list-style-type: none;
+    font-weight: 100;
+  }
+
+  h3 {
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+
+  .device_type {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .color {
+    margin-bottom: 40px;
+  }
+  
+  .ram {
+    margin-bottom: 30px;
+  }
+
+  .side_bar input {
+    display: none;
+  }
+
+.side_bar input+label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.side_bar input+label::before {
+  box-sizing: border-box;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+.side_bar input:checked + label::before {
+  background-color: white;
+}
+
+  .more_option_block {
+    margin-bottom: 30px;
+    padding-left: 8px;
+  }
+  
+  .more_options {
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 100;
+    color: white;
+  }
+  
+  .submit_block {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .submit_btn {
+    width: 210px;
+    height: 50px;
+    background-color: #2c71b8;
+    border: 1px solid white;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+  }
+  
+  /* ----------- Основний блок з товарами ------------  */
+  
+  .products_window {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  
+  .way {
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .way_link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-weight: 100;
+  }
+  
+  .products_name_sort {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .product_type_name {
+    margin-left: 15px;
+    line-height: 48px;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .sort_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 270px;
+    border: 1px solid white;
+    padding-left: 20px;
+    padding-right: 0;
+    background-color: #2c71b8;
+  }
+  
+  .sort_link {
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+    font-weight: 100;
+  }
+  
+  .sort_choose {
+    padding: 10px;
+    color: white;
+  }
+  
+  .sort_type_list {
+    width: 200px;
+    position: relative;
+  }
+  
+  .sort_type_list > li {
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sort_type_list li:hover .sub_menu_sort_type_list {
+    display: block;
+  }
+  
+  .sort_type_list > li > a {
+    display: block;
+    width: 100%;
+  }
+  
+  .sub_menu_sort_type_list {
+    padding-top: 10px;
+    position: absolute;
+    left: -21px;
+    top: 100%;
+    border: 1px solid white;
+    border-top: none;
+    background-color: #2c71b8;
+    text-decoration: none;
+    display: none;
+    z-index: 10;
+  }
+  
+  .sub_menu_sort_type_list li {
+    font-size: 21px;
+    font-weight: 100;
+    width: 268px;
+    height: 40px;
+  }
+  
+  .sub_menu_sort_type_list a:hover {
+    background-color: white;
+    color: #2c71b8;
+  }
+  
+  .sub_menu_sort_type_list a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 100;
+    color: white;
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+  }
+  
+  /* -------------- блок з картками продуктів ----------------------- */
+  
+  .tablets {
+    display: flex;
+    flex-wrap: wrap;
+    width: 915px;
+    padding-left: 15px;
+    gap: 30px 0;
+  }
+  
+  .items {
+    width: 270px;
+    height: fit-content;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  .product_image {
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .wish_list {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-image: url("images/icon (5).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #2c71b8;
+    right: 10px;
+    top: 50px;
+    cursor: pointer;
+  }
+  
+  .big_product_picture {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-image: url("images/icon (8).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #2c71b8;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  
+  .description {
+    width: 240px;
+    height: fit-content;
+    margin: 15px;
+    font-size: 21px;
+    font-weight: 100;
+  }
+  
+  .device_name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .tech_char {
+    margin-top: 20px;
+  }
+  
+  .characteristics {
+    font-size: 21px;
+    font-weight: bold;
+  }
+  
+  .price {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 48px;
+    text-align: center;
+  }
+  
+  .cents {
+    font-size: 21px;
+    vertical-align: top;
+  }
+  
+  .more_btn_block {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .more_btn {
+    width: 210px;
+    height: 50px;
+    font-size: 21px;
+    font-weight: bold;
+    background-color: #2c71b8;
+    color: white;
+    outline: none;
+    border-color: white;
+  }
+  
+  .ad_cart_btn_block {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ad_cart_btn {
+    width: 210px;
+    height: 50px;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    border: none;
+  }
+  
+  .white_cart_img {
+    margin-left: 5px;
+  }
+  
+  .load_btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .load_more_btn {
+    padding: 10px;
+    background: none;
+    font-size: 36px;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* footer */
+  
+  footer {
+    margin-top: 90px;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    font-size: 21px;
+    color: #2c71b8;
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+  }
+  

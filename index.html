@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop project</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="logo">
+            <a href="">
+              <img src="images/logo.png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-6">
+          <nav>
+            <ul class="menu">
+              <li><a href="">Home</a></li>
+              <li>
+                <a href="">Products</a>
+                <ul class="sub_menu">
+                  <li><a href="">Phones</a></li>
+                  <li><a href="">Laptop and Tablets</a></li>
+                  <li><a href="">PC's</a></li>
+                  <li><a href="">E-books</a></li>
+                </ul>
+              </li>
+              <li><a href="">Payment</a></li>
+              <li><a href="">Shipping</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-3">
+          <div class="search_cart">
+
+            <div class="search">
+              <input class="search_input" type="text" name="" id="" placeholder="search">
+              <button class="search_btn" type="submit"></button>
+            </div>
+
+            <div class="col-3">
+              <div class="cart">
+                <div class="cart_button">
+                  <button class="cart_btn" type="submit"></button>
+                </div>
+                <div class="items_number">
+                  <p class="items_n">4</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="gallery">
+    Gallery
+  </section>
+  <main class="main">
+    <div class="container product_content">
+
+      <aside class="side_bar">
+        <div class="device_type">
+          <h3>DEVICE TYPE</h3>
+          <ul>
+            <li>
+              <input class="checkbox" type="checkbox" name="device" id="laptop">
+              <label for="laptop">Laptop</label>
+            </li>
+            <li>
+              <input class="checkbox" type="checkbox" name="device" id="tablet">
+              <label for="tablet">Tablet</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="color">
+          <h3>COLOR</h3>
+          <ul>
+            <li>
+              <input class="checkbox" type="checkbox" name="color" id="black">
+              <label for="black">Black</label>
+            </li>
+            <li>
+              <input class="checkbox" type="checkbox" name="color" id="red">
+              <label for="red">Red</label>
+            </li>
+            <li>
+              <input class="checkbox" type="checkbox" name="color" id="green">
+              <label for="green">Green</label>
+            </li>
+            <li>
+              <input class="checkbox" type="checkbox" name="color" id="blue">
+              <label for="blue">Blue</label>
+            </li>
+            <li>
+              <input class="checkbox" type="checkbox" name="color" id="orange">
+              <label for="orange">Orange</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="ram">
+          <h3>RAM</h3>
+          <ul>
+            <li>
+              <input class="checkbox" type="checkbox" name="ram" id="1gb">
+              <label for="1gb">1 GB</label>
+            </li>
+            <li>
+              <input class="checkbox" type="checkbox" name="ram" id="2gb">
+              <label for="2gb">2 GB</label>
+            </li>
+            <li>
+              <input class="checkbox" type="checkbox" name="ram" id="3gb">
+              <label for="3gb">3 GB</label>
+            </li>
+            <li>
+              <input class="checkbox" type="checkbox" name="ram" id="4gb">
+              <label for="4gb">4 GB</label>
+            </li>
+            <li>
+              <input class="checkbox" type="checkbox" name="ram" id="5gb">
+              <label for="5gb">5 GB</label>
+            </li>
+          </ul>
+        </div>
+        <div class="more_option_block">
+          <a class="more_options" href="">Show more options ...</a>
+        </div>
+        <div class="submit_block">
+          <button class="submit_btn">SUBMIT</button>
+        </div>
+      </aside>
+      <section class="products">
+        <div class="products_window">
+          <div class="small_header">
+            <div class="way">
+              <a class="way_link" href="">Home page ></a>
+              <a class="way_link" href="">Products ></a>
+              <a class="way_link" href="">Laptops and Tablets</a>
+            </div>
+            <div class="products_name_sort">
+              <h2 class="product_type_name">
+                Laptops and Tablets
+              </h2>
+              <div class="sort_menu">
+                <ul class="sort_type_list">
+                  <li>
+                    <a class="sort_link" href="">sort by price</a>
+                    <ul class="sub_menu_sort_type_list">
+                      <li><a href="">sort by name</a></li>
+                      <li><a href="">sort by date</a></li>
+                      <li><a href="">sort by popularity</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <div class="sort_choose">
+                  &or;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tablets">
+          <div class="col-4">
+            <div class="items">
+              <div class="product_image">
+                <img class="images" src="images/icon (17).png" alt="monitor" />
+                <div class="big_product_picture"></div>
+                <div class="wish_list"></div>
+              </div>
+              <div class="line"></div>
+              <div class="description">
+                <h2 class="device_name">#1 Device name</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p class="tech_char">
+                  <span class="characteristics">Type:</span> Laptop
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">Screen size:</span> 7 inches
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">RAM:</span> 1 Gb
+                </p>
+              </div>
+              <div class="price">
+                <p>$599 <span class="cents">25</span></p>
+              </div>
+              <div class="more_btn_block">
+                <button class="more_btn">MORE DETAILS</button>
+              </div>
+              <div class="ad_cart_btn_block">
+                <button class="ad_cart_btn">
+                  ADD TO CART
+                  <img class="white_cart_img" src="images/white_cart.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="items">
+              <div class="product_image">
+                <img class="images" src="images/icon (9).png" alt="monitor" />
+                <div class="big_product_picture"></div>
+                <div class="wish_list"></div>
+              </div>
+              <div class="line"></div>
+              <div class="description">
+                <h2 class="device_name">#2 Device name</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p class="tech_char">
+                  <span class="characteristics">Type:</span> Laptop
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">Screen size:</span> 7 inches
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">RAM:</span> 1 Gb
+                </p>
+              </div>
+              <div class="price">
+                <p>$1250 <span class="cents">99</span></p>
+              </div>
+              <div class="more_btn_block">
+                <button class="more_btn">MORE DETAILS</button>
+              </div>
+              <div class="ad_cart_btn_block">
+                <button class="ad_cart_btn">
+                  ADD TO CART
+                  <img class="white_cart_img" src="images/white_cart.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="items">
+              <div class="product_image">
+                <img class="images" src="images/icon (10).png" alt="monitor" />
+                <div class="big_product_picture"></div>
+                <div class="wish_list"></div>
+              </div>
+              <div class="line"></div>
+              <div class="description">
+                <h2 class="device_name">#3 Device name</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p class="tech_char">
+                  <span class="characteristics">Type:</span> Laptop
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">Screen size:</span> 7 inches
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">RAM:</span> 1 Gb
+                </p>
+              </div>
+              <div class="price">
+                <p>$399 <span class="cents">50</span></p>
+              </div>
+              <div class="more_btn_block">
+                <button class="more_btn">MORE DETAILS</button>
+              </div>
+              <div class="ad_cart_btn_block">
+                <button class="ad_cart_btn">
+                  ADD TO CART
+                  <img class="white_cart_img" src="images/white_cart.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="items">
+              <div class="product_image">
+                <img class="images" src="images/icon (16).png" alt="monitor" />
+                <div class="big_product_picture"></div>
+                <div class="wish_list"></div>
+              </div>
+              <div class="line"></div>
+              <div class="description">
+                <h2 class="device_name">#4 Device name</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p class="tech_char">
+                  <span class="characteristics">Type:</span> Laptop
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">Screen size:</span> 7 inches
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">RAM:</span> 1 Gb
+                </p>
+              </div>
+              <div class="price">
+                <p>$599 <span class="cents">25</span></p>
+              </div>
+              <div class="more_btn_block">
+                <button class="more_btn">MORE DETAILS</button>
+              </div>
+              <div class="ad_cart_btn_block">
+                <button class="ad_cart_btn">
+                  ADD TO CART
+                  <img class="white_cart_img" src="images/white_cart.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="items">
+              <div class="product_image">
+                <img class="images" src="images/icon (14).png" alt="monitor" />
+                <div class="big_product_picture"></div>
+                <div class="wish_list"></div>
+              </div>
+              <div class="line"></div>
+              <div class="description">
+                <h2 class="device_name">#5 Device name</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p class="tech_char">
+                  <span class="characteristics">Type:</span> Laptop
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">Screen size:</span> 7 inches
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">RAM:</span> 1 Gb
+                </p>
+              </div>
+              <div class="price">
+                <p>$1250 <span class="cents">99</span></p>
+              </div>
+              <div class="more_btn_block">
+                <button class="more_btn">MORE DETAILS</button>
+              </div>
+              <div class="ad_cart_btn_block">
+                <button class="ad_cart_btn">
+                  ADD TO CART
+                  <img class="white_cart_img" src="images/white_cart.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="items">
+              <div class="product_image">
+                <img class="images" src="images/icon (12).png" alt="monitor" />
+                <div class="big_product_picture"></div>
+                <div class="wish_list"></div>
+              </div>
+              <div class="line"></div>
+              <div class="description">
+                <h2 class="device_name">#6 Device name</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p class="tech_char">
+                  <span class="characteristics">Type:</span> Laptop
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">Screen size:</span> 7 inches
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">RAM:</span> 1 Gb
+                </p>
+              </div>
+              <div class="price">
+                <p>$399 <span class="cents">50</span></p>
+              </div>
+              <div class="more_btn_block">
+                <button class="more_btn">MORE DETAILS</button>
+              </div>
+              <div class="ad_cart_btn_block">
+                <button class="ad_cart_btn">
+                  ADD TO CART
+                  <img class="white_cart_img" src="images/white_cart.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="items">
+              <div class="product_image">
+                <img class="images" src="images/icon (15).png" alt="monitor" />
+                <div class="big_product_picture"></div>
+                <div class="wish_list"></div>
+              </div>
+              <div class="line"></div>
+              <div class="description">
+                <h2 class="device_name">#7 Device name</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p class="tech_char">
+                  <span class="characteristics">Type:</span> Laptop
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">Screen size:</span> 7 inches
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">RAM:</span> 1 Gb
+                </p>
+              </div>
+              <div class="price">
+                <p>$599 <span class="cents">25</span></p>
+              </div>
+              <div class="more_btn_block">
+                <button class="more_btn">MORE DETAILS</button>
+              </div>
+              <div class="ad_cart_btn_block">
+                <button class="ad_cart_btn">
+                  ADD TO CART
+                  <img class="white_cart_img" src="images/white_cart.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="items">
+              <div class="product_image">
+                <img class="images" src="images/icon (9).png" alt="monitor" />
+                <div class="big_product_picture"></div>
+                <div class="wish_list"></div>
+              </div>
+              <div class="line"></div>
+              <div class="description">
+                <h2 class="device_name">#8 Device name</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p class="tech_char">
+                  <span class="characteristics">Type:</span> Laptop
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">Screen size:</span> 7 inches
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">RAM:</span> 1 Gb
+                </p>
+              </div>
+              <div class="price">
+                <p>$1250 <span class="cents">99</span></p>
+              </div>
+              <div class="more_btn_block">
+                <button class="more_btn">MORE DETAILS</button>
+              </div>
+              <div class="ad_cart_btn_block">
+                <button class="ad_cart_btn">
+                  ADD TO CART
+                  <img class="white_cart_img" src="images/white_cart.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="items">
+              <div class="product_image">
+                <img class="images" src="images/icon (10).png" alt="monitor" />
+                <div class="big_product_picture"></div>
+                <div class="wish_list"></div>
+              </div>
+              <div class="line"></div>
+              <div class="description">
+                <h2 class="device_name">#9 Device name</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p class="tech_char">
+                  <span class="characteristics">Type:</span> Laptop
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">Screen size:</span> 7 inches
+                </p>
+                <p class="tech_char">
+                  <span class="characteristics">RAM:</span> 1 Gb
+                </p>
+              </div>
+              <div class="price">
+                <p>$399 <span class="cents">50</span></p>
+              </div>
+              <div class="more_btn_block">
+                <button class="more_btn">MORE DETAILS</button>
+              </div>
+              <div class="ad_cart_btn_block">
+                <button class="ad_cart_btn">
+                  ADD TO CART
+                  <img class="white_cart_img" src="images/white_cart.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+    </div>
+  </main>
+  <footer class="footer">
+    &#169; Copyright 2017
+  </footer>
+</body>
+
+</html>
