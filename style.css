@@ -470,20 +470,25 @@
     width: 30px;
     height: 30px;
     position: absolute;
-    background-image: url("images/icon (5).png");
-    background-position: center;
-    background-repeat: no-repeat;
     border: 1px solid #2c71b8;
     right: 10px;
     top: 50px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wish-list-img {
+    width: 19px;
+    height: 19px;
   }
   
   .big_product_picture {
     width: 30px;
     height: 30px;
     position: absolute;
-    background-image: url("images/icon (8).png");
+    background-image: url("images/icon_8.png");
     background-position: center;
     background-repeat: no-repeat;
     border: 1px solid #2c71b8;
@@ -666,4 +671,8 @@
 
 .hide {
   display: none;
+}
+
+.wish-list-liked {
+  background-color: #2c71b8;
 }
