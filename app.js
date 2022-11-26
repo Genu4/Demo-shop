@@ -19,10 +19,9 @@ function openModalScroll () {
     if (window.pageYOffset > document.body.scrollHeight/2) {
         modal.classList.add("show");
         modal.classList.remove("hide");
-        window.removeEventListener("scroll", openModalNew);
+        window.removeEventListener("scroll", openModalScroll);
     }
-    console.log(window.pageYOffset);
-
+    
 }
 /* поява модального вікна при натисканні на кнопку More Details*/
 moreDetailsBtns.forEach((item) => {
