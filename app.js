@@ -76,28 +76,95 @@ let inputQuantity = document.querySelectorAll(".input-quantity");
 console.log(delItemBtns);
 console.log(addItemBtns);
 console.log(inputQuantity);
-
-addItemBtns.forEach((item, i) => {
-    item.addEventListener("click", function() {
-        let currentCount = inputQuantity[i].value;
-        inputQuantity[i] = +currentCount + 1;
-    })
-})
 */
 
-function Counter(addItemBtns, delItemBtns, inputQuantity) {
+/* перший варіант */
+/*
+addItemBtns.forEach((item, i) => {
+  item.addEventListener("click", function () {
+    let currentCount = +inputQuantity[i].value;
+    inputQuantity[i].value = currentCount + 1;
+  });
+});
+
+delItemBtns.forEach((item, i) => {
+  item.addEventListener("click", function () {
+    let currentCount = +inputQuantity[i].value;
+    inputQuantity[i].value = currentCount - 1;
+  });
+});
+*/
+/* другий варіант */
+
+function Counter(
+  addItemBtns,
+  delItemBtns,
+  inputQuantity,
+  minCount = 1,
+  maxCount = 10
+) {
   this.domRefs = {
     addItemBtns,
     delItemBtns,
     inputQuantity,
   };
+
   this.toggleButtonState = function () {
     let count = this.domRefs.inputQuantity.value;
-    this.domRefs.delItemBtns.disabled = count <= 1;
-    this.domRefs.addItemBtns.disabled = count >= 10;
+    this.domRefs.delItemBtns.disabled = count <= minCount;
+    this.domRefs.addItemBtns.disabled = count >= maxCount;
   };
   this.toggleButtonState();
-  console.log(this);
+  
+  this.increment = function () {
+    this.domRefs.inputQuantity.value = +this.domRefs.inputQuantity.value + 1;
+    this.toggleButtonState();
+  };
+
+  this.decrement = function () {
+    this.domRefs.inputQuantity.value = +this.domRefs.inputQuantity.value - 1;
+    this.toggleButtonState();
+  };
+  console.log(this.domRefs.inputQuantity.value);
+  this.domRefs.addItemBtns.addEventListener("click", this.increment.bind(this));
+  this.domRefs.delItemBtns.addEventListener("click", this.decrement.bind(this));
 }
 
-let counter1 = new Counter(addItemBtns[0], delItemBtns[0], inputQuantity[0]);
+//let counter1 = new Counter(addItemBtns[0], delItemBtns[0], inputQuantity[0]);
+
+const counters = [];
+
+inputQuantity.forEach(
+  (countItem, i) =>
+    (counters[i] = new Counter(
+      addItemBtns[i],
+      delItemBtns[i],
+      inputQuantity[i]
+    ))
+);
+
+/*
+function hi(surname) {
+  console.log(this);
+  console.log(this.name + surname);
+}
+hi();
+const jack = {
+  name: "Jack",
+};
+
+const pablo = {
+  name: "Pablo",
+};
+
+// call, apply, bind
+
+hi.call(jack, " Call");
+hi.call(pablo, " Call");
+
+hi.apply(jack, [" Apply"]);
+hi.apply(pablo, [" Apply"]);
+
+let test = hi.bind(jack, " Bind");
+test();
+*/
