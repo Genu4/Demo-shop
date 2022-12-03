@@ -130,7 +130,6 @@ function Counter(
   this.domRefs.delItemBtns.addEventListener("click", this.decrement.bind(this));
 }
 
-//let counter1 = new Counter(addItemBtns[0], delItemBtns[0], inputQuantity[0]);
 
 const counters = [];
 
@@ -142,29 +141,3 @@ inputQuantity.forEach(
       inputQuantity[i]
     ))
 );
-
-/*
-function hi(surname) {
-  console.log(this);
-  console.log(this.name + surname);
-}
-hi();
-const jack = {
-  name: "Jack",
-};
-
-const pablo = {
-  name: "Pablo",
-};
-
-// call, apply, bind
-
-hi.call(jack, " Call");
-hi.call(pablo, " Call");
-
-hi.apply(jack, [" Apply"]);
-hi.apply(pablo, [" Apply"]);
-
-let test = hi.bind(jack, " Bind");
-test();
-*/
